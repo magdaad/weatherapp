@@ -1,0 +1,198 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+body {
+  /*padding-top: 20px;*/
+  /*background-image: url("img/clouds2.jpg");*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.head{
+  background-color: rgba(0,82,156,1.0);
+}
+
+.head p{
+  font-size: 60px;
+  color:whitesmoke;
+}
+
+p {
+ // padding: 5px;
+}
+
+.menu-weather{
+  text-align:center;
+}
+
+.menu-weather li{
+  display:inline-block;
+  text-align: center;
+}
+
+.forecast{
+  width: 100%;  /* Or whatever */
+  height: 10px; /* Or whatever */
+  margin: auto;
+  display:inline-block;
+}
+
+.forecastCity{
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+}
+
+.forecastCity h1 {
+  position: relative;
+  font-size: 8rem;
+  margin-top: 0;
+  font-family: 'Myriad Pro', 'Myriad', helvetica, arial, sans-serif;
+  text-shadow: 2px 3px 3px #292929;
+  letter-spacing: -7px;
+  -webkit-text-stroke: 2px white;
+  color:rgba(0, 82, 156, 1.0)
+}
+
+.forecast-item{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.forecast-item div{
+  display:flex;
+  text-align: center;
+  align-self: center;
+  text-align:center;
+}
+
+@media screen and (max-width: 768px)  {
+  .forecast-item div{
+    display:inline-block;
+    width:99vw;
+  }
+}
+
+
+
+.paginationWrapper{
+  display:inline-block;
+  text-align:center;
+  width:100%;
+
+  ul{
+    display:inline-block;
+
+  }
+}
+
+
+.currentTemp{
+  font-size: 5.5rem;
+  color: whitesmoke;
+  font-weight:100;
+}
+
+.currentCity{
+  font-size: 6rem;
+  color: whitesmoke;
+  font-weight:100;
+}
+
+.flex-contain{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+figcaption{
+  text-align: center;
+}
+
+.daily-forecast{
+  display:inline-flex;
+  justify-content:space-around;
+  align-items:center;
+  align-self: center;
+  width:100vw;
+
+}
+
+.daily-date{
+  background-color: rgba(0, 82, 156, 0.9);
+  font-weight:bold;
+  color:whitesmoke;
+}
+
+.daily-temperature{
+  background-color: rgba(0, 82, 156, 0.8);
+  color:whitesmoke;
+}
+
+.daily-wind{
+  background-color: rgba(0, 82, 156, 0.6);
+  color:whitesmoke;
+}
+
+.daily-item{
+  background-color: rgba(0, 82, 156, 0.1);
+  text-align: center;
+  border: solid white;
+  border-width: 6px;
+}
+
+.dailyCity{
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+}
+
+.dailyCity h1 {
+  position: relative;
+  font-size: 8rem;
+  margin-top: 0;
+  font-family: 'Myriad Pro', 'Myriad', helvetica, arial, sans-serif;
+  text-shadow: 2px 3px 3px #292929;
+  letter-spacing: -7px;
+  -webkit-text-stroke: 2px white;
+  color:rgba(0, 82, 156, 1.0)
+}
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

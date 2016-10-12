@@ -1,0 +1,32 @@
+<div class="container">
+<br>
+
+  <div class="panel panel-primary">
+    <div class="panel-body">
+        <div class="dailyCity panel-body">
+            <h1>{{daily.model.city2}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <div  class="daily-item col-sm-4 col-md-3 col-lg-2 col-xs-12" ng-repeat="k in daily.model.range(0,11)">
+        <div class="daily-date">
+            <p>{{k.dt*1000  | date:'EEEE'}}<br> {{k.dt*1000  | date:'dd MMM yyyy'}}</p>
+        </div>
+          <!--<div ><p>{{k.dt }}</p></div>-->
+        <div ><img ng-src= 'http://openweathermap.org/img/w/{{k.weather[0].icon}}.png' /> </div>
+        <div class="daily-temperature">
+          <div ><p>Temperature: {{k.temp.day}} &deg;C</p></div>
+          <div ><p>{{k.temp.min}}&deg;C / {{k.temp.max}} &deg;C</p></div>
+        </div>
+        <div class="daily-wind">
+          <div ><p>Wind: {{k.speed}} m/s</p></div>
+          <div><p>Clouds: {{k.clouds}}%</p></div>
+        </div>
+
+    </div>
+</div>
+
+</div>

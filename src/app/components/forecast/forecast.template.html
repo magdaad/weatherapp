@@ -1,0 +1,45 @@
+<div class="container">
+<br>
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <div class="forecastCity panel-body">
+            <h1>{{model.city2}}</h1>
+        </div>
+    </div>
+</div>
+
+  <div>
+    <div  ng-repeat="n in model.range((currentPage-1)*itemsPerPage, (itemsPerPage*currentPage)-1)">
+      <div class="row" >
+        <div class="forecast-item col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12"  ng-if="$odd" style="background-color:rgba(0, 82, 156, 0.6); color:whitesmoke">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" ><p>{{n.dt*1000 | date:'EEE'}} {{n.dt*1000 | date:'short'}}</p></div>
+          <div class="col-lg-1 col-md-4 col-sm-6 col-xs-12" ><img ng-src= 'http://openweathermap.org/img/w/{{n.weather[0].icon}}.png' /> </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12" ><p> {{n.main.temp}} &deg;C</p></div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12" ><p>Wind: {{n.wind.speed}}m/s</p></div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12" ><p>Clouds: {{n.clouds.all}}%</p></div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12" > <p>{{n.weather[0].description}}</p></div>
+        </div>
+
+        <div class="forecast-item col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12" ng-if="$even" style="background-color:rgba(0,82,156,0.2); color:#404040">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><p>{{n.dt*1000 | date:'EEE'}} {{n.dt*1000  |  date:'short'}}</p></div>
+          <div class="col-lg-1 col-md-4 col-sm-6 col-xs-12"><img ng-src= 'http://openweathermap.org/img/w/{{n.weather[0].icon}}.png' /> </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12"><p> {{n.main.temp}}&deg;C </p></div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12"><p>Wind: {{n.wind.speed}}m/s</p></div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12"><p>Clouds: {{n.clouds.all}}%</p></div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12"> <p>{{n.weather[0].description}}</p></div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <div class="row">
+    <div class="row paginationWrapper">
+      <ul uib-pagination class="pagination" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" items-per-page="itemsPerPage" first-text="First" last-text="last" boundary-links="true"></ul>
+    </div>
+  </div>
+  </div>
+
+
+
+</div>

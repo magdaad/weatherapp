@@ -1,0 +1,35 @@
+<div class="container">
+  <br>
+
+<br>
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+        <div class="col-sm-5" style="background-color:rgba(0, 82, 156, 0.8); height: 300px">
+            <h1 class="currentCity col-sm-12 col-md-10 text-left">{{current.model.city}}</h1>
+            <img class="col-sm-4 col-sm-offset-4" style="height:115px; width:auto;" ng-src= 'http://openweathermap.org/img/w/{{current.model.icon}}.png' />
+            <h1 class="currentTemp col-sm-12 col-md-12 text-right">{{current.model.temperature}}&deg;C</h1>
+        </div>
+
+        <div class="col-sm-7 flex-contain" style="background-color:rgba(0, 82, 156, 0.4); height: 300px">
+                <figure>
+                    <img class="img-responsive" src="app/components/icons/clouds.png" style="height:113px; width:auto;" alt="clouds"/>
+                    <figcaption>{{current.model.clouds}}</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-responsive" src="app/components/icons/humidity.png" style="height:113px; width:auto;" alt="humidity"/>
+                    <figcaption>{{current.model.humidity}}</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-responsive" src="app/components/icons/pressure.png" alt="pressure"/>
+                    <figcaption>{{current.model.pressure}}</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-responsive" src="app/components/icons/wind.png" alt="wind"/>
+                    <figcaption>{{current.model.wind}}</figcaption>
+                </figure>
+        </div>
+        </div>
+    </div>
+</div>
+
